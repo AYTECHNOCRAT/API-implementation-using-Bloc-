@@ -4,6 +4,7 @@ import 'package:credicxo/BloC/trACKS/track_event.dart';
 import 'package:credicxo/Screens/screen2.dart';
 import 'package:credicxo/Screens/screen3.dart';
 import 'package:credicxo/data/Model/d1.dart';
+import 'package:credicxo/res/strings.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -124,6 +125,7 @@ class _TracksListState extends State<TracksListScreen> {
   void navigateToLyricsDetailsScreen(BuildContext context,int trackId){
 
     Navigator.push(context, MaterialPageRoute(builder: (context){
+      //AllStrings(id: trackId.toString());
       return LyricsScreen(trackId);
     }));
 

@@ -18,7 +18,6 @@ class TrackLoadingState extends TrackState{
 
 class TrackLoadedstate extends TrackState{
   @override
-
   List<TrackList> list;
   TrackLoadedstate({@required this.list});
   // TODO: implement props

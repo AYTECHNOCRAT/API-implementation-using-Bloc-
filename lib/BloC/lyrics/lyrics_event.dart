@@ -9,4 +9,5 @@ class FetchLyrics extends LyricsEvent{
   // TODO: implement props
   List<Object> get props => null;
 
+
 }

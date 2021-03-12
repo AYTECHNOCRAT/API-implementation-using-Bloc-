@@ -1,4 +1,7 @@
+import 'package:credicxo/BloC/lyrics/lyrics_bloc.dart';
 import 'package:credicxo/BloC/trACKS/track_bloc.dart';
+import 'package:credicxo/Screens/screen3.dart';
+import 'package:credicxo/data/repository/api_C_reepository.dart';
 import 'package:credicxo/data/repository/api_a_repository.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -16,8 +19,11 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: BlocProvider(
-          create: (context) => TrackBloc(repository: TracksRepository(),),
+      home: MultiBlocProvider(
+        providers: [
+          BlocProvider<TrackBloc>.value(value: TrackBloc(repository: TracksRepository()),child: TracksListScreen(),),
+          BlocProvider<LyricsBloc>.value(value: LyricsBloc(repository: LyricsRepository())),
+        ],
         child: TracksListScreen(),
       ),
     );

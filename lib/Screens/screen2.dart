@@ -2,7 +2,6 @@ import 'package:credicxo/Screens/screen3.dart';
 import 'package:credicxo/data/Model/d1.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:http/http.dart' as http;
 
 class TrackDetailScreen extends StatelessWidget {
 
